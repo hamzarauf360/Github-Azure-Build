@@ -11,9 +11,9 @@ steps:
   - script: |
      npm install
      npm run build
-    workingDirectory: '$(System.DefaultWorkingDirectory)/Github-Azure-Build'
+    workingDirectory: '$(System.DefaultWorkingDirectory)'
     displayName: 'npm install and build'
   - script: |
      npm start
-    workingDirectory: '$(System.DefaultWorkingDirectory)/Github-Azure-Build'
+    workingDirectory: '$(System.DefaultWorkingDirectory)'
     displayName: 'npm start'
