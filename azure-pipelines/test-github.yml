@@ -3,12 +3,12 @@ trigger:
 pool:
    vmImage: 'windows-latest'
 steps:
-  - powershell: Get-ChildItem -Path '$(System.DefaultWorkingDirectory)' -recurse 
   - task: NodeTool@0
     inputs:
      versionSpec: '18.x.x'
     displayName: 'Install Node.js'
   - script: |
+     npm install
      npm run build
     workingDirectory: '$(System.DefaultWorkingDirectory)'
     displayName: 'npm install and build'
