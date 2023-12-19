@@ -2,15 +2,20 @@ trigger:
  - master  
 pool:
    vmImage: 'windows-latest'
-steps: 
+steps:
   - task: NodeTool@0
     inputs:
      versionSpec: '18.x.x'
     displayName: 'Install Node.js'
   - script: |
      npm install
+    workingDirectory: '$(System.DefaultWorkingDirectory)'
+    displayName: 'npm install'
+  - script: |
      npm run build
-    displayName: 'npm install and build'
+    workingDirectory: '$(System.DefaultWorkingDirectory)'
+    displayName: 'npm build'
   - script: |
      npm start
+    workingDirectory: '$(System.DefaultWorkingDirectory)'
     displayName: 'npm start'
