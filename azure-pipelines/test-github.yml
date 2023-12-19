@@ -9,9 +9,12 @@ steps:
     displayName: 'Install Node.js'
   - script: |
      npm install
+    workingDirectory: '$(System.DefaultWorkingDirectory)'
+    displayName: 'npm install'
+  - script: |
      npm run build
     workingDirectory: '$(System.DefaultWorkingDirectory)'
-    displayName: 'npm install and build'
+    displayName: 'npm build'
   - script: |
      npm start
     workingDirectory: '$(System.DefaultWorkingDirectory)'
