@@ -1,0 +1,21 @@
+{
+  "name": "github-azure-build",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc 1>&2",
+    "start": "node ./lib/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hamzarauf360/Github-Azure-Build.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hamzarauf360/Github-Azure-Build/issues"
+  },
+  "homepage": "https://github.com/hamzarauf360/Github-Azure-Build#readme"
+}
